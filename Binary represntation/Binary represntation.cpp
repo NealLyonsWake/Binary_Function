@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -28,15 +29,34 @@ void binary(int n) {
 	cout << "32 bit binary representation is: " << result << bin << endl;
 } 
 
+
+// Function that takes a binary representation as a string and prints out the integer value of that representation
+void num(string binary) {
+
+	int result = 0;
+
+	reverse(binary.begin(), binary.end());
+
+	for (int i = 0; i < binary.length(); i++) {
+		result += (binary[i] - '0') * pow(2, i);
+	}
+
+	cout << result;
+}
+
+
 int main()
 {
-	// Call the function and include the integer input
-	binary(1);
-	binary(2);
-	binary(3);
-	binary(4);
-	binary(456789);
-	binary(101112);
-	binary(131415);
-	binary(203142);
+	// Call the binary function and include the integer input
+	//binary(1);
+	//binary(2);
+	//binary(3);
+	//binary(4);
+	//binary(456789);
+	//binary(101112);
+	//binary(131415);
+	//binary(203142);
+
+	// Call the num function and include the string input
+	num("011");
 }

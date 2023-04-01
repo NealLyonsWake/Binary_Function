@@ -1,2 +1,3 @@
 ﻿  Binary represntation.cpp
-  Binary represntation.vcxproj -> C:\Users\nealw\Documents\c_plusplus\Binary represntation\x64\Debug\Binary represntation.exe
+C:\Users\nealw\source\repos\NealLyonsWake\Binary_Function\Binary represntation\Binary represntation.cpp(42,31): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Binary represntation.vcxproj -> C:\Users\nealw\Source\Repos\NealLyonsWake\Binary_Function\x64\Debug\Binary represntation.exe

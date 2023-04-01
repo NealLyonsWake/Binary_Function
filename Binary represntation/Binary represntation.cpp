@@ -33,30 +33,26 @@ void binary(int n) {
 // Function that takes a binary representation as a string and prints out the integer value of that representation
 void num(string binary) {
 
-	int result = 0;
-
-	reverse(binary.begin(), binary.end());
+	int result = 0; // Declare result to be printed at the end of the function
 
 	for (int i = 0; i < binary.length(); i++) {
-		result += (binary[i] - '0') * pow(2, i);
+		// Iterate the input and add to result: the value at the current position * 2 to the power of the length of the input - the iterater (opposite of current position)
+		result += (binary[i] - '0') * pow(2, (binary.length()-1)-i); 
 	}
 
-	cout << result;
+	cout << "The integer value of the binary input is: " << result << endl;
 }
 
 
 int main()
 {
 	// Call the binary function and include the integer input
-	//binary(1);
-	//binary(2);
-	//binary(3);
-	//binary(4);
-	//binary(456789);
-	//binary(101112);
-	//binary(131415);
-	//binary(203142);
-
-	// Call the num function and include the string input
-	num("011");
+	binary(256);
+	binary(1);
+	binary(4);
+	
+	// Call the num function and include the binary string input
+	num("100000000");
+	num("001");
+	num("100");
 }
